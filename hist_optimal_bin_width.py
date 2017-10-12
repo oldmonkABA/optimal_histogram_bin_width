@@ -1,10 +1,12 @@
 '''
 Author   : Arun B Ayyar
 
-Based on : Shimazaki H. and Shinomoto S., A method for selecting the bin size of a time histogram Neural Computation (2007) Vol. 19(6), 1503-1527
+Based on : Shimazaki H. and Shinomoto S., A method for selecting the bin size of a time histogram Neural Computation (2007)
+	   Vol. 19(6), 1503-1527
 
-Data     : The duration for eruptions of the Old Faithful geyser in Yellowstone National Park (in minutes) or normal distribuition.
-		   given at http://176.32.89.45/~hideaki/res/histogram.html
+Data     : The duration for eruptions of the Old Faithful geyser in Yellowstone National Park (in minutes) 
+	   or normal distribuition.
+	   given at http://176.32.89.45/~hideaki/res/histogram.html
 
 Comments : Implements a faster version than using hist from matplotlib and histogram from numpy libraries	
            Also implements the shifts for the bin edges
