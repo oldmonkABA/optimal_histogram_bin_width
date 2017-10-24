@@ -41,7 +41,7 @@ n_min = 2   #Minimum number of bins Ideal value = 2
 n_max = 200  #Maximum number of bins  Ideal value =200
 n_shift = 30     #number of shifts Ideal value = 30
 N = np.array(range(n_min,n_max))
-D = (data_max-data_min)/N    #Bin width vector
+D = float(data_max-data_min)/N    #Bin width vector
 Cs = np.zeros((len(D),n_shift)) #Cost function vector
 #Computation of the cost function
 for i in xrange(np.size(N)):
@@ -59,7 +59,7 @@ C=Cs.mean(1)
 loc = np.argwhere(Cs==Cs.min())[0]
 cmin = C.min()
 idx  = np.where(C==cmin)
-idx = int(idx[0])
+idx = idx[0][0]
 optD = D[idx]
 print 'Optimal Bin Number :',N[idx]
 print 'Optimal Bin Width :',optD
